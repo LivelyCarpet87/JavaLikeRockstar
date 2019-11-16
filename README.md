@@ -56,82 +56,83 @@ For the following documentation, _I_, _Adam_ and _Eve_ are Rockstar objects.
 Objects must unfortunately be defined normally in Java. However, methods can be used to modify the value stored:
 
 ### Integers: 
->"is_a(String s)    is_the(String s)    was_a(String s) was_the(String s)"
+>is_a(String s)    is_the(String s)    was_a(String s) was_the(String s)
 
 These methods change the int value of the object according to the string input. For example,
- >"Tommy.is_the("boy who cried Wolfram-Alpha")"
+ >Tommy.is_the("boy who cried Wolfram-Alpha")
+
 will change the int value of Tommy to 3353. This package splices the string by spaces and counts the number of characters of each word, special characters included. It then does %10 to the char count and uses it as a digit. 
 
 ### Strings:
->"says(String s)"
+>says(String s)
 
 This method changes the stored String value of the object to the string input. 
 
 ### Special:
 
->"is_(String s)"
+>is_(String s)
 
 We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and an int. 
 
->"is_(int j)"
+>is_(int j)
 
 Sets the int value of object to input. 
 
->"I.put(Adam,\"into\",Eve)"
+>I.put(Adam,"into",Eve)
 
 Sets int and String of Eve to those of Adam
  
 ## 2. Comparisons int
 
-Eve.is(Adam)
+>Eve.is(Adam)
 
 Returns if Eve==Adam as boolean. **Please note difference from Eve.is_("Adam")**
 
-Adam.isnt(Eve)
+>Adam.isnt(Eve)
 
 Returns if Adam != Eve as boolean.
 
-Adam.is_greater_than(Eve) .is_bigger_than() .is_stronger_than() .is_higher_than()
+>Adam.is_greater_than(Eve) .is_bigger_than() .is_stronger_than() .is_higher_than()
 
 Returns if Adam>Eve as boolean. 
 
-Adam.is_less_than(Eve) .is_smaller_than() .is_weaker_than() .is_lower_than()
+>Adam.is_less_than(Eve) .is_smaller_than() .is_weaker_than() .is_lower_than()
 
 Returns if Adam<Eve as boolean. 
 
-Adam.is_as_great_as(Eve) .is_as_big_as() .is_as_strong_as() .is_as_high_as()
+>Adam.is_as_great_as(Eve) .is_as_big_as() .is_as_strong_as() .is_as_high_as()
 
 Returns if Adam>=Eve as boolean. 
 
-Adam.is_as_little_as(Eve) .is_as_small_as() .is_as_weak_as() .is_as_low_as()
+>Adam.is_as_little_as(Eve) .is_as_small_as() .is_as_weak_as() .is_as_low_as()
 
 Returns if Adam<=Eve as boolean. 
 
 ## 3. Math
 
-Because some words are reserved, "_" were added
+**Because some words are reserved, "_" were added before**
 
-Adam.minus(Eve) Adam.without(Eve)
+>Adam.minus(Eve) Adam.without(Eve)
 
 Returns as int: Adam - Eve
 
-Adam.plus(Eve) Adam._with(Eve)
+>Adam.plus(Eve) Adam._with(Eve)
 
 Returns as int: Adam + Eve
 
-Adam.times(Eve) Adam._of(Eve)
+>Adam.times(Eve) Adam._of(Eve)
 
 Returns as int: Adam * Eve
 
-Adam.over(Eve)
+>Adam.over(Eve)
 
 Returns as int: Adam / Eve
 
-I.build(Adam, "up, up, and up")
+>I.build(Adam, "up, up, and up")
 
 Adds to Adam: 1 * <amount of times "up" was detected>. Please separate the "up" with **spaces**. Uses .contains("up") after parsing spaces. 
 
-I.knock(Adam, "downhill again")
+>I.knock(Adam, "downhill again")
 
 Subtracts from Adam: 1 * <amount of time "down" was detected>. Please separate the "down" with **spaces**. Uses .contains("down") after parsing spaces. 
 
@@ -139,27 +140,27 @@ Subtracts from Adam: 1 * <amount of time "down" was detected>. Please separate t
 
 Please note as a general rule, the methods that end with "s" deal with strings. 
 
-I.whisper(Eve)
+>I.whisper(Eve)
 
 Returns int value of Eve
 
-Adam.whispers(Eve) Adam.say(Eve)
+>Adam.whispers(Eve) Adam.say(Eve)
 
 Returns the string stored in Eve. 
 
 ## 5. println()
 
-I.scream(Eve) I.shout(Eve)
+>I.scream(Eve) I.shout(Eve)
 
 Prints int value of Eve
 
-Adam.screams(Eve) Adam.shouts(Eve)
+>Adam.screams(Eve) Adam.shouts(Eve)
 
 Prints String value of Eve
 
 ## 6. Scanner
 
-Adam.listen()
+>Adam.listen()
 
 Reads .nextln and sets input to value of Sting and int of Adam
 
@@ -176,9 +177,14 @@ Change to FLoat
 
 Adam.says("lively")
 Eve.says("carpet87")
+Boby.says("filler word")
 Tommy.is_("at")
 Jake.says(gmail)
 Who.says("/* the */.com")//bubble is gone
 
-
+I.whisper(Adam);
+I.whisper(Eve);
+I.whisper(Tommy);
+I.whisper(Jake);
+I.whisper(Who);
 
