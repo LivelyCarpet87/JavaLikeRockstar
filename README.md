@@ -1,6 +1,11 @@
 # JavaLikeRockstar
 This package can help you code in Java with style of Rockstar. Become a Java Rockstar Developer.
 
+## What is rockstar?
+
+It is in short a language that reads like power ballads. Rockstar is intended to give the programmer an unprecedented degree of poetic license when it comes to the composition and structure of their programs.
+
+## Background
 This project was created as a fun joke to make coding schoolwork harder to read or change. It soon developed into a fun project which helped me pick up my Java skills. I apologize in advance for bad style, redundancy and inefficiency. It deviates from official Rockstar specs to make it more useful or to resolve my incompetence. 
 
 This package creates objects that can store values and can be manipulated like one would in Rockstar. Each object can store separately a float, boolean, array, and String, but it is recommended to use each object to store one type of value. 
