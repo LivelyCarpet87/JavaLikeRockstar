@@ -61,7 +61,7 @@ Objects must unfortunately be defined normally in Java. However, methods can be 
 These methods change the float value of the object according to the string input. For example,
  >Tommy.is_the("boy who cried Wolfram-Alpha")
 
-will change the float value of Tommy to 3353. This package splices the string by spaces and counts the number of characters of each word, special characters included. It then does %10 to the char count and uses it as a digit. 
+will change the float value of Tommy to 33353. This package splices the string by spaces and counts the number of characters of each word, special characters included. It then does %10 to the char count and uses it as a digit. 
 
 ### Strings:
 >says(String s)
@@ -73,10 +73,6 @@ This method changes the stored String value of the object to the string input.
 >Adam.is_scared_of(Eve)
 
 Sets boolean value of Adam to that of Eve
-
->Adam.is_(boolean b)
-
-Sets boolean value of Adam to input
 
 ### Arrays:
 
@@ -90,7 +86,7 @@ Adds the inputed Rockstar object to array.
 
 ### Special:
 
->is_(String s)
+>is_(String s) was_(String s)
 
 We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and a float. 
 
@@ -101,6 +97,14 @@ Sets the float value of object to input.
 >I.put(Adam,"into",Eve)
 
 Sets float and String of Eve to those of Adam
+
+>I.put(int j,"into",Eve)
+
+Sets float value of Eve to j
+
+>Adam.is_(boolean b)
+
+Sets boolean value of Adam to input
  
 ## 2. Comparisons float
 
@@ -209,7 +213,7 @@ Sets the boolean value of the Rockstar object like defined in Rockstar Specs. Ab
 Add more plurals
 Support arrays more
 
-#Bugs and Suggestions
+# Bugs and Suggestions
 
 Please open an issue if any error is spotted, or if something just doesn't seem to make sense. 
 
