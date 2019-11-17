@@ -1,9 +1,9 @@
 # JavaLikeRockstar
 This package can help you code in Java with style of Rockstar. Become a Java Rockstar Developer.
 
-This project was created as a fun joke to make coding schoolwork harder to read or change. It soon developed into a fun project which helped me pick up my Java skills. I apologize in advance for bad style, redundancy and inefficiency. 
+This project was created as a fun joke to make coding schoolwork harder to read or change. It soon developed into a fun project which helped me pick up my Java skills. I apologize in advance for bad style, redundancy and inefficiency. It deviates from official Rockstar specs to make it more useful or to resolve my incompetence. 
 
-This package creates objects that can store values and can be manipulated like one would in Rockstar. Each object can store separately a int and a String, but it is recommended to use each object to store one of the two. 
+This package creates objects that can store values and can be manipulated like one would in Rockstar. Each object can store separately a float, boolean, array, and String, but it is recommended to use each object to store one type of value. 
 
 
 # Example script:
@@ -55,34 +55,54 @@ For the following documentation, _I_, _Adam_ and _Eve_ are Rockstar objects.
 
 Objects must unfortunately be defined normally in Java. However, methods can be used to modify the value stored:
 
-### Integers: 
+### Floats: 
 >is_a(String s)    is_the(String s)    was_a(String s) was_the(String s)
 
-These methods change the int value of the object according to the string input. For example,
+These methods change the float value of the object according to the string input. For example,
  >Tommy.is_the("boy who cried Wolfram-Alpha")
 
-will change the int value of Tommy to 3353. This package splices the string by spaces and counts the number of characters of each word, special characters included. It then does %10 to the char count and uses it as a digit. 
+will change the float value of Tommy to 3353. This package splices the string by spaces and counts the number of characters of each word, special characters included. It then does %10 to the char count and uses it as a digit. 
 
 ### Strings:
 >says(String s)
 
 This method changes the stored String value of the object to the string input. 
 
+### Booleans:
+
+>Adam.is_scared_of(Eve)
+
+Sets boolean value of Adam to that of Eve
+
+>Adam.is_(boolean b)
+
+Sets boolean value of Adam to input
+
+### Arrays:
+
+>Adam.had(int i, Rockstar a)
+
+Adds the inputed Rockstar object to the slot I of array. **Please note arrays start at 1.**
+
+>Adam.had_a(Rockstar a)
+
+Adds the inputed Rockstar object to array. 
+
 ### Special:
 
 >is_(String s)
 
-We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and an int. 
+We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and a float. 
 
->is_(int j)
+>is_(float j)
 
-Sets the int value of object to input. 
+Sets the float value of object to input. 
 
 >I.put(Adam,"into",Eve)
 
-Sets int and String of Eve to those of Adam
+Sets float and String of Eve to those of Adam
  
-## 2. Comparisons int
+## 2. Comparisons float
 
 >Eve.is(Adam)
 
@@ -114,19 +134,19 @@ Returns if Adam<=Eve as boolean.
 
 >Adam.minus(Eve) Adam.without(Eve)
 
-Returns as int: Adam - Eve
+Returns as float: Adam - Eve
 
 >Adam.plus(Eve) Adam._with(Eve)
 
-Returns as int: Adam + Eve
+Returns as float: Adam + Eve
 
 >Adam.times(Eve) Adam._of(Eve)
 
-Returns as int: Adam * Eve
+Returns as float: Adam * Eve
 
 >Adam.over(Eve)
 
-Returns as int: Adam / Eve
+Returns as float: Adam / Eve
 
 >I.build(Adam, "up, up, and up")
 
@@ -142,17 +162,25 @@ Please note as a general rule, the methods that end with "s" deal with strings.
 
 >I.whisper(Eve)
 
-Returns int value of Eve
+Returns float value of Eve
 
 >Adam.whispers(Eve) Adam.say(Eve)
 
 Returns the string stored in Eve. 
 
+>Adam.the(3,"rd") Adam.the(3)
+
+Returns 3rd Rockstar object in array stored in Adam
+
+>Adam.said_boo()
+
+Returns boolean stored in Adam
+
 ## 5. println()
 
 >I.scream(Eve) I.shout(Eve)
 
-Prints int value of Eve
+Prints float value of Eve
 
 >Adam.screams(Eve) Adam.shouts(Eve)
 
@@ -162,16 +190,28 @@ Prints String value of Eve
 
 >Adam.listen()
 
-Reads .nextln and sets input to value of Sting and int of Adam
+Reads .nextln and sets input to value of Sting and float of Adam
 
+##7. Boolean Operators:
 
+>Adam.and(boolean b) Adam.and(Eve) Adam.or(boolean b) Adam.or(Eve) Adam.nor(boolean b) Adam.nor(Eve)
+
+Does the operations with boolean value of Adam and that of inputed object or inputed boolean
+
+## 8. Defining boolean values for objects
+
+> Adam.is_true() the_cake.is_a_lie() the_cakes.are_lies() the_cakes.were_lies() Tommy.is_no("fun")
+
+Sets the boolean value of the Rockstar object like defined in Rockstar Specs. Above are some special cases. **Most methods** support adding a string input (which is ignored) to make code read better without comments. This is done so if adding a string makes sense. 
 
 # TODO:
 
-Add plurals
-Add boolean
-Change to FLoat
+Add more plurals
+Support arrays more
 
+#Bugs and Suggestions
+
+Please open an issue if any error is spotted, or if something just doesn't seem to make sense. 
 
 # Contact:
 
