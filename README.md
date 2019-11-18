@@ -83,7 +83,7 @@ Sets boolean value of Adam to that of Eve
 
 >Adam.had(int i, Rockstar a)
 
-Adds the inputed Rockstar object to the slot I of array. **Please note arrays start at 1.**
+Adds the inputed Rockstar object to the slot I of ArrayList. **Please note arrays start at 1 due to manipulation in the method.**
 
 >Adam.had_a(Rockstar a)
 
@@ -91,13 +91,17 @@ Adds the inputed Rockstar object to array.
 
 ### Special:
 
->is_(String s) was_(String s)
+>is_(String s) is_(String s)
 
 We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and a float. 
 
->is_(float j)
+>is_(int j)
 
 Sets the float value of object to input. 
+
+> is_(boolean b)
+
+Sets the boolean value of object to input
 
 >I.put(Adam,"into",Eve)
 
@@ -217,6 +221,7 @@ Sets the boolean value of the Rockstar object like defined in Rockstar Specs. Ab
 
 Add more plurals
 Support arrays more
+Stop counting special characters in Float define
 
 # Bugs and Suggestions
 
