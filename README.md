@@ -37,16 +37,16 @@ This package creates objects that can store values and can be manipulated like o
 		Rockstar I = new Rockstar(), nothing = new Rockstar(0), Desire = new Rockstar(), my_world = new Rockstar(), Fire = new Rockstar(), Hate = new Rockstar();
 		
 		
-		//Pt2:rockstar lyrics
-		Desire.is_a("lovestruck lady killer");
-		my_world.is(nothing);
-		Fire.is_("ice");
-		Hate.is_("water");
-		while(my_world.isnt(Desire)) {
-			I.build(my_world, "up");
-		}
-		
-		I.scream(my_world);
+		//Pt2:rockstar lyrics  
+		Desire.is_a("lovestruck lady killer");  
+		my_world.is(nothing);  
+		Fire.is_("ice");  
+		Hate.is_("water");  
+		while(my_world.isnt(Desire)) {  
+			I.build(my_world, "up");  
+		}  
+		  
+		I.scream(my_world);  
 
 
 
@@ -56,166 +56,163 @@ This package creates objects that can store values and can be manipulated like o
 
 For the following documentation, _I_, _Adam_ and _Eve_ are Rockstar objects.
 
-## 1. Defining Values
+## 1. Floats
 
-Objects must unfortunately be defined normally in Java. However, methods can be used to modify the value stored:
+### Defining Values: 
 
-### Floats: 
->is_a(String s)    is_the(String s)    was_a(String s) was_the(String s)
+>Rockstar Nothing = new Rockstar(0);  
+Defines Nothing with float Value 0;
 
-These methods change the float value of the object according to the string input. For example,
+>is_a(String s)    is_the(String s)    was_a(String s) was_the(String s)  
+These methods change the float value of the object according to the string input. For example,  
  >Tommy.is_the("boy who cried Wolfram-Alpha")
-
 will change the float value of Tommy to 33353. This package splices the string by spaces and counts the number of characters of each word, special characters included. It then does %10 to the char count and uses it as a digit. 
 
-### Strings:
->says(String s)
-
-This method changes the stored String value of the object to the string input. 
-
-### Booleans:
-
->Adam.is_scared_of(Eve)
-
-Sets boolean value of Adam to that of Eve
-
-### Arrays:
-
->Adam.had(int i, Rockstar a)
-
-Adds the inputed Rockstar object to the slot I of ArrayList. **Please note arrays start at 1 due to manipulation in the method.**
-
->Adam.had_a(Rockstar a)
-
-Adds the inputed Rockstar object to array. 
-
-### Special:
-
->is_(String s) is_(String s)
-
-We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and a float. 
-
->is_(int j)
-
+>is_(float j) is_(int j)  
 Sets the float value of object to input. 
 
-> is_(boolean b)
+>is_(String s) is_(String s)  
+We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and a float.
 
-Sets the boolean value of object to input
+>Adam.listen()  
+Reads from console and sets input to value of Sting and float of Adam
 
->I.put(Adam,"into",Eve)
-
+>I.put(Adam,"into",Eve)  
 Sets float and String of Eve to those of Adam
 
->I.put(int j,"into",Eve)
-
+>I.put(float j,"into",Eve)  
 Sets float value of Eve to j
 
->Adam.is_(boolean b)
-
-Sets boolean value of Adam to input
- 
-## 2. Comparisons float
-
->Eve.is(Adam)
-
-Returns if Eve==Adam as boolean. **Please note difference from Eve.is_("Adam")**
-
->Adam.isnt(Eve)
-
-Returns if Adam != Eve as boolean.
-
->Adam.is_greater_than(Eve) .is_bigger_than() .is_stronger_than() .is_higher_than()
-
-Returns if Adam>Eve as boolean. 
-
->Adam.is_less_than(Eve) .is_smaller_than() .is_weaker_than() .is_lower_than()
-
-Returns if Adam<Eve as boolean. 
-
->Adam.is_as_great_as(Eve) .is_as_big_as() .is_as_strong_as() .is_as_high_as()
-
-Returns if Adam>=Eve as boolean. 
-
->Adam.is_as_little_as(Eve) .is_as_small_as() .is_as_weak_as() .is_as_low_as()
-
-Returns if Adam<=Eve as boolean. 
-
-## 3. Math
+### Manipulating Values:
 
 **Because some words are reserved, "_" were added before**
 
->Adam.minus(Eve) Adam.without(Eve)
-
+>Adam.minus(Eve) Adam.without(Eve)  
 Returns as float: Adam - Eve
 
->Adam.plus(Eve) Adam._with(Eve)
-
+>Adam.plus(Eve) Adam._with(Eve)  
 Returns as float: Adam + Eve
 
->Adam.times(Eve) Adam._of(Eve)
-
+>Adam.times(Eve) Adam._of(Eve)  
 Returns as float: Adam * Eve
 
->Adam.over(Eve)
-
+>Adam.over(Eve)  
 Returns as float: Adam / Eve
 
->I.build(Adam, "up, up, and up")
-
+>I.build(Adam, "up, up, and up")  
 Adds to Adam: 1 * <amount of times "up" was detected>. Please separate the "up" with **spaces**. Uses .contains("up") after parsing spaces. 
 
->I.knock(Adam, "downhill again")
-
+>I.knock(Adam, "downhill again")  
 Subtracts from Adam: 1 * <amount of time "down" was detected>. Please separate the "down" with **spaces**. Uses .contains("down") after parsing spaces. 
 
-## 4. Get Value
+### Comparing Values
+>Eve.is(Adam)  
+Returns if Eve==Adam as boolean. **Please note difference from Eve.is_("Adam")**
 
-Please note as a general rule, the methods that end with "s" deal with strings. 
+>Adam.isnt(Eve)  
+Returns if Adam != Eve as boolean.
 
->I.whisper(Eve)
+>Adam.is_greater_than(Eve) .is_bigger_than() .is_stronger_than() .is_higher_than()  
+Returns if Adam>Eve as boolean. 
 
+>Adam.is_less_than(Eve) .is_smaller_than() .is_weaker_than() .is_lower_than()  
+Returns if Adam<Eve as boolean. 
+
+>Adam.is_as_great_as(Eve) .is_as_big_as() .is_as_strong_as() .is_as_high_as()  
+Returns if Adam>=Eve as boolean. 
+
+>Adam.is_as_little_as(Eve) .is_as_small_as() .is_as_weak_as() .is_as_low_as()  
+Returns if Adam<=Eve as boolean. 
+
+### Retrieve Value
+
+>I.whisper(Eve)  
 Returns float value of Eve
 
->Adam.whispers(Eve) Adam.say(Eve)
+### Print Value
 
-Returns the string stored in Eve. 
-
->Adam.the(3,"rd") Adam.the(3)
-
-Returns 3rd Rockstar object in array stored in Adam
-
->Adam.said_boo()
-
-Returns boolean stored in Adam
-
-## 5. println()
-
->I.scream(Eve) I.shout(Eve)
-
+>I.scream(Eve) I.shout(Eve)  
 Prints float value of Eve
 
->Adam.screams(Eve) Adam.shouts(Eve)
 
+
+## 2. Strings:
+
+### Defining Values
+>Adam.listen()  
+Reads from console and sets input to value of Sting and float of Adam
+
+>says(String s). 
+This method changes the stored String value of the object to the string input. 
+
+>is_(String s) is_(String s)  
+We all wanna say something like "Tommy is famous" sometime to make our code more readable. Because of ambiguity, this method does functions of is_a(String s) AND says(String s). Use with caution if a variable stores both a string and a float. 
+
+>I.put(Adam,"into",Eve)  
+Sets float and String of Eve to those of Adam
+
+### Retrieve Values
+Please note as a general rule, the methods that end with "s" deal with strings. 
+
+>Adam.whispers(Eve) Adam.say(Eve)  
+Returns the string stored in Eve. 
+
+### Print Values
+
+>Adam.screams(Eve) Adam.shouts(Eve). 
 Prints String value of Eve
 
-## 6. Scanner
 
->Adam.listen()
+## 3. Booleans:
 
-Reads .nextln and sets input to value of Sting and float of Adam
+### Defining Values
+> is_(boolean b)  
+Sets the boolean value of object to input
 
-##7. Boolean Operators:
+>Adam.is_scared_of(Eve)  
+Sets boolean value of Adam to that of Eve
 
->Adam.and(boolean b) Adam.and(Eve) Adam.or(boolean b) Adam.or(Eve) Adam.nor(boolean b) Adam.nor(Eve)
+> Adam.is_true() the_cake.is_a_lie() the_cakes.are_lies() the_cakes.were_lies() Tommy.is_no("fun")  
+Sets the boolean value of the Rockstar object like defined in Rockstar Specs. Above are some special cases. **Most methods** support adding a string input (which is ignored) to make code read better without comments. This is done so if adding a string makes sense.
 
+### Boolean Operators
+>Adam.and(boolean b) Adam.and(Eve) Adam.or(boolean b) Adam.or(Eve) Adam.nor(boolean b) Adam.nor(Eve)  
 Does the operations with boolean value of Adam and that of inputed object or inputed boolean
 
-## 8. Defining boolean values for objects
+> Adam.is_scary_like(Eve)  
+Compares the boolean values of Adam and Eve and returns if they are equal
 
-> Adam.is_true() the_cake.is_a_lie() the_cakes.are_lies() the_cakes.were_lies() Tommy.is_no("fun")
+### Retrieving Values
+>Adam.said_boo()  
+Returns boolean stored in Adam
 
-Sets the boolean value of the Rockstar object like defined in Rockstar Specs. Above are some special cases. **Most methods** support adding a string input (which is ignored) to make code read better without comments. This is done so if adding a string makes sense. 
+
+## 4. Arrays:
+
+### Intro
+
+This is a major derivative from Rockstar Specs as of the writing. Each Rockstar object stores an ArrayList of more Rockstar object. Hopefully, this makes everything make more sense. 
+
+### Adding to array
+>Adam.had_a(Rockstar a)  
+Appends the inputed Rockstar object to array. 
+
+>Adam.had(float i, Rockstar a)  
+Adds the inputed Rockstar object to the slot "i" of ArrayList (Will Replace). **Please note arrays start at 1 due to manipulation in the method.**
+
+### Retrieve 
+>Adam.the(3,"rd") Adam.the(3)  
+Returns 3rd Rockstar object in array stored in Adam
+
+## 9. Object Manipulation
+>put(Rockstar Adam, "into" , Eve)  
+Puts Adam's String and float value into Eve. *This may be expanded to boolean and/or arrays in future updates.
+
+> has_left_the_room()  
+Calls System.exit(). 
+
+> has_left_the_room("once") has_left_the_room("twice") has_left_the_room("thrice")  
+Exits like above method, except customizable exit value. 
 
 # TODO:
 
